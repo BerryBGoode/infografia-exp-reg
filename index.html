@@ -4,24 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Expresiones regulares</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        background: "#0f172a",
-                        panel: "#111827",
-                        accent: "#8b5cf6",
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="min-h-screen bg-slate-950 text-slate-200">
@@ -49,14 +32,12 @@
                             Ej. 123456
                         </p>
                     </div>
-                    <div class="mt-2 flex gap-2">
-                        <input type="text" placeholder="Escribe un valor..."
+                    <form class="mt-2 flex gap-2">
+                        <input type="text" placeholder="Escribe un valor..." required id="txtNumeros"
                             class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
-                        <button type="button"
-                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
-                            Probar
-                        </button>
-                    </div>
+                        <input type="submit" id="solo-numeros" value="Probar"
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">                    
+                    </form>
                 </div>
             </div>
             <div class="border-b border-slate-800 pb-5">
@@ -69,14 +50,13 @@
                             Ej. Jose
                         </p>
                     </div>
-                    <div class="mt-2 flex gap-2">
-                        <input type="text" placeholder="Escribe un valor..."
+                    <form class="mt-2 flex gap-2">
+                        <input type="text" placeholder="Escribe un valor..." id="txtLetras"
                             class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
-                        <button type="button"
-                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
-                            Probar
-                        </button>
-                    </div>
+                        <input type="submit" value="Probar" 
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700"
+                            id="solo-letras">
+                    </form>
                 </div>
             </div>
             <div class="border-b border-slate-800 pb-5">
@@ -90,13 +70,12 @@
                         </p>
                     </div>
                     <div class="mt-2 flex gap-2">
-                        <input type="email" placeholder="Escribe un valor..."
+                        <input type="email" placeholder="Escribe un valor..." id="txtCorreo"
                             class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
 
-                        <button type="button"
+                        <input type="submit" id="correo" value="Probar"
                             class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
-                            Probar
-                        </button>
+
                     </div>
                 </div>
             </div>
@@ -111,12 +90,11 @@
                         </p>
                     </div>
                     <div class="mt-2 flex gap-2">
-                        <input type="text" maxlength="9" placeholder="Escribe un valor..."
+                        <input type="text" maxlength="9" placeholder="Escribe un valor..." id="txttelefono"
                             class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
-                        <button type="button"
+                        <input type="submit" id="telefono" value="Probar"
                             class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
-                            Probar
-                        </button>
+
                     </div>
                 </div>
             </div>
@@ -131,17 +109,19 @@
                         </p>
                     </div>
                     <div class="mt-2 flex gap-2">
-                        <input type="text" placeholder="Escribe un valor..."
+                        <input type="text" placeholder="Escribe un valor..." id="txtDui"
                             class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
-                        <button type="button"
+                        <input type="submit" value="Probar" id="Dui"
                             class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
-                            Probar
-                        </button>
+                        
                     </div>
                 </div>
             </div>
         </section>
     </main>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="main.js"></script>
 
 </html>
