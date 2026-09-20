@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expresiones regulares</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#0f172a",
+                        panel: "#111827",
+                        accent: "#8b5cf6",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-200">
+    <header class="border-b border-slate-800">
+        <div class="mx-auto max-w-5xl px-6 py-8">
+            <h1 class="text-2xl font-semibold text-white">
+                Prueba de expresiones regualres
+            </h1>
+        </div>
+    </header>
+    <main class="mx-auto max-w-5xl px-6 py-10">
+        <div class="mb-10">
+            <h2 class="text-lg font-medium text-white">
+                Expresiones regulares
+            </h2>
+        </div>
+        <section class="space-y-5">
+            <div class="border-b border-slate-800 pb-5">
+                <div class="grid gap-4 md:grid-cols-[180px_1fr]">
+                    <div>
+                        <h3 class="text-sm font-medium text-white">
+                            Solo números
+                        </h3>
+                        <p class="mt-1 text-xs text-slate-500">
+                            Ej. 123456
+                        </p>
+                    </div>
+                    <div class="mt-2 flex gap-2">
+                        <input type="text" placeholder="Escribe un valor..."
+                            class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
+                        <button type="button"
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
+                            Probar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-slate-800 pb-5">
+                <div class="grid gap-4 md:grid-cols-[180px_1fr]">
+                    <div>
+                        <h3 class="text-sm font-medium text-white">
+                            Solo letras
+                        </h3>
+                        <p class="mt-1 text-xs text-slate-500">
+                            Ej. Jose
+                        </p>
+                    </div>
+                    <div class="mt-2 flex gap-2">
+                        <input type="text" placeholder="Escribe un valor..."
+                            class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
+                        <button type="button"
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
+                            Probar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-slate-800 pb-5">
+                <div class="grid gap-4 md:grid-cols-[180px_1fr]">
+                    <div>
+                        <h3 class="text-sm font-medium text-white">
+                            Correo electrónico
+                        </h3>
+                        <p class="mt-1 text-xs text-slate-500">
+                            Ej. jose@email.com
+                        </p>
+                    </div>
+                    <div class="mt-2 flex gap-2">
+                        <input type="email" placeholder="Escribe un valor..."
+                            class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
+
+                        <button type="button"
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
+                            Probar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-slate-800 pb-5">
+                <div class="grid gap-4 md:grid-cols-[180px_1fr]">
+                    <div>
+                        <h3 class="text-sm font-medium text-white">
+                            Teléfono
+                        </h3>
+                        <p class="mt-1 text-xs text-slate-500">
+                            Ej. 1234-5678
+                        </p>
+                    </div>
+                    <div class="mt-2 flex gap-2">
+                        <input type="text" maxlength="9" placeholder="Escribe un valor..."
+                            class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
+                        <button type="button"
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
+                            Probar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-slate-800 pb-5">
+                <div class="grid gap-4 md:grid-cols-[180px_1fr]">
+                    <div>
+                        <h3 class="text-sm font-medium text-white">
+                            Número de DUI
+                        </h3>
+                        <p class="mt-1 text-xs text-slate-500">
+                            12345678-9
+                        </p>
+                    </div>
+                    <div class="mt-2 flex gap-2">
+                        <input type="text" placeholder="Escribe un valor..."
+                            class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2.5 font-mono text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500">
+                        <button type="button"
+                            class="rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-violet-500 active:bg-violet-700">
+                            Probar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
